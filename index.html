@@ -93,7 +93,7 @@
     .seq-item .seq-num{font-size:20px}
     .seq-item .seq-lbl{font-size:10px;color:rgba(139,168,196,.6)}
     .seq-item.mystery{border-color:rgba(250,199,117,.3);background:rgba(250,199,117,.06)}
-    .seq-options{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:1rem}
+    .seq-options{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1rem}
     .seq-option{padding:.65rem .75rem;border-radius:8px;font-size:14px;border:1px solid rgba(181,212,244,.15);background:rgba(255,255,255,.03);color:#8ba8c4;cursor:pointer;text-align:center;transition:all .2s}
     .seq-option:hover{background:rgba(55,138,221,.1);border-color:rgba(55,138,221,.3);color:#B5D4F4}
     .seq-option.wrong{background:rgba(226,75,74,.1);border-color:rgba(226,75,74,.3);color:#F09595;animation:shake .3s ease}
@@ -143,11 +143,11 @@
   <div id="screen-final" class="screen">
     <div class="final-wrap">
       <div class="final-icon">&#x1F305;</div>
-      <h1 class="final-title">Lo lograste, M!</h1>
+      <h1 class="final-title">♥ Lo lograste mi amor!</h1>
       <div class="final-card">
         <p class="final-desc">Resolviste cada acertijo porque cada uno era un pedazo de nuestra historia. Dos meses que apenas son el comienzo de todo lo que viene.</p>
-        <div class="final-quote">Esta noche quiero que sigamos escribiendo nuestra historia juntos...<br><br>Me acompanas a cenar?</div>
-        <p class="final-signature">Con todo mi amor &mdash; D</p>
+        <div class="final-quote">Esta noche quiero que sigamos escribiendo nuestra historia juntos...<br><br><strong>¿Me acompañas a cenar? ♥</strong><br><br><span style="font-size:11px;opacity:0.75;font-style:italic;">Cupón válido para hoy a las 6:30 PM &mdash; se puntual ♥</span></div>
+        <p class="final-signature">Con todo mi amor &mdash; Dani ♥</p>
       </div>
     </div>
   </div>
@@ -164,12 +164,12 @@ var T = {
   c1_subR: "Exacto! Revisa la puerta de tu cuarto, busca algo azul pegado ah\u00ed",
 
   c2_riddle: "En este mar de letras se esconden las iniciales de dos personas que decidieron escribir su historia juntas. Hay impostoras, no todas son las correctas. Enc\u00faentralas.",
-  c2_where: "Lo que buscas viaja contigo a todos lados, guarda tus secretos y tus esenciales. No es tu tel\u00e9fono, pero siempre est\u00e1 cerca de \u00e9l.",
-  c2_sub: "Soy de tela o cuero, tengo compartimentos, las mujeres me llevan colgando o en la mano. Guardo llaves, dinero y misterios. \u00bfQu\u00e9 soy?",
-  c2_subA: "bolso",
-  c2_subR: "Correcto! Busca dentro de tu bolso o cartera",
+  c2_where: "Tiene compartimentos secretos, te acompa\u00f1a a todos lados y guarda lo que m\u00e1s necesitas. No habla pero sabe todos tus secretos. \u00bfQu\u00e9 es?",
+  c2_sub: "Soy m\u00e1s peque\u00f1a que una maleta, m\u00e1s grande que un sobre. Guardo billetes, tarjetas y secretos. Sin cremallera o bot\u00f3n no abro. \u00bfQu\u00e9 soy?",
+  c2_subA: "cartera",
+  c2_subR: "Correcto! Busca dentro de tu cartera",
 
-  c3_riddle: "Cada n\u00famero es una letra. Descifra el mensaje oculto.",
+  c3_riddle: "Cada n\u00famero representa la posici\u00f3n de una letra en el abecedario. El 1 es A, el 2 es B... \u00bfPuedes descifrar el mensaje?",
   c3_placeholder: "La palabra descifrada",
   c3_error: "Revisa: P=16, I=9, Z=26, Z=26, A=1",
   c3_where: "Busca donde el calor transforma los ingredientes crudos en algo delicioso. Es el coraz\u00f3n de la casa donde los aromas cuentan historias.",
@@ -217,7 +217,7 @@ var T = {
   c8_subA: "patio",
   c8_subR: "Exacto! Ve al patio, busca debajo de una maceta o en una silla",
 
-  c9_riddle: "Soy alto y blanco, zumbo suavemente. Guardo lo que alimenta y preservo lo que se echar\u00eda a perder. Sin m\u00ed, la comida dura poco. Cada casa me tiene. \u00bfQu\u00e9 soy?",
+  c9_riddle: "Preservo lo que se echar\u00eda a perder. Cada casa me tiene. \u00bfQu\u00e9 soy?",
   c9_placeholder: "Tu respuesta",
   c9_error: "Piensa en un electrodom\u00e9stico grande y fr\u00edo que est\u00e1 en la cocina...",
   c9_where: "Cambiaron una parcela y ahora estoy yo. \u00bfQu\u00e9 soy?",
@@ -228,9 +228,9 @@ var T = {
   c10_riddle: "No somos los mismos que empezamos. Cada mes que pasa escribimos una p\u00e1gina nueva juntos. El primer cap\u00edtulo naci\u00f3 un 15 de enero. \u00bfCu\u00e1ndo se escribi\u00f3 el segundo?",
   c10_placeholder: "DD de mes",
   c10_error: "Piensa... cada mes se cumple el mismo d\u00eda que el primero. \u00bfCu\u00e1ndo fue el segundo mes?",
-  c10_where: "El premio final no est\u00e1 escondido en esta casa. Est\u00e1 en las manos de alguien que lleva semanas pensando en ti. Busca a D.",
-  c10_sub: "Quien organiz\u00f3 todo este enigma? Quien puso cada pista en su lugar pensando en hacerte sonre\u00edr? Escribe su nombre.",
-  c10_subA: "d",
+  c10_where: "El premio final no est\u00e1 escondido en esta casa. Est\u00e1 en las manos de alguien que lleva semanas pensando en ti. Busca a Dani.",
+  c10_sub: "\u00bfQui\u00e9n organiz\u00f3 todo este enigma? \u00bfQui\u00e9n puso cada pista en su lugar pensando en hacerte sonre\u00edr? Escribe su nombre completo.",
+  c10_subA: "dani",
   c10_subR: "Exacto! D tiene algo especial para ti esta noche"
 };
 
@@ -243,7 +243,7 @@ var CLUES = [
   {num:2,type:"Busca en Pantalla",title:"Las iniciales perdidas",mode:"cloud",riddleKey:"c2_riddle",answer:"md",errorKey:"",whereKey:"c2_where",subKey:"c2_sub",subAnswerKey:"c2_subA",subRevealKey:"c2_subR",placeholder:""},
   {num:3,type:"Codigo Cifrado",title:"Descifra la palabra",mode:"cipher",riddleKey:"c3_riddle",placeholderKey:"c3_placeholder",cipherDisplay:"16 - 9 - 26 - 26 - 1",answer:"pizza",errorKey:"c3_error",whereKey:"c3_where",subKey:"c3_sub",subAnswerKey:"c3_subA",subRevealKey:"c3_subR"},
   {num:4,type:"Acertijo Misterioso",title:"El objeto eterno",mode:"logic",riddleKey:"c4_riddle",placeholderKey:"c4_placeholder",answer:"anillo",errorKey:"c4_error",whereKey:"c4_where",subKey:"c4_sub",subAnswerKey:"c4_subA",subRevealKey:"c4_subR"},
-  {num:5,type:"Secuencia de Colores",title:"Completa el patron",mode:"colorseq",riddleKey:"c5_riddle",answer:"azul",errorKey:"c5_error",successKey:"c5_success",whereKey:"c5_where",subKey:"c5_sub",subAnswerKey:"c5_subA",subRevealKey:"c5_subR",colorSeq:["Rojo","Naranja","Amarillo","Verde","?"],colorEmoji:["\u{1F534}","\u{1F7E0}","\u{1F7E1}","\u{1F7E2}","?"],options:[{label:"Azul",emoji:"\u{1F535}",val:"azul"},{label:"Morado",emoji:"\u{1F7E3}",val:"morado"},{label:"Blanco",emoji:"\u26AA",val:"blanco"},{label:"Rosa",emoji:"\u{1FA77}",val:"rosa"}]},
+  {num:5,type:"Secuencia de Colores",title:"Completa el patron",mode:"colorseq",riddleKey:"c5_riddle",answer:"azul",errorKey:"c5_error",successKey:"c5_success",whereKey:"c5_where",subKey:"c5_sub",subAnswerKey:"c5_subA",subRevealKey:"c5_subR",colorSeq:["Rojo","Naranja","Amarillo","Verde","?"],colorEmoji:["\u{1F534}","\u{1F7E0}","\u{1F7E1}","\u{1F7E2}","?"],options:[{label:"Azul",emoji:"\u{1F535}",val:"azul"},{label:"Morado",emoji:"\u{1F7E3}",val:"morado"},{label:"Cyan",emoji:"\u{1F4A7}",val:"cyan"},{label:"Verde Azulado",emoji:"\u{1F9CA}",val:"verdeazulado"},{label:"Indigo",emoji:"\u2B50",val:"indigo"},{label:"Turquesa",emoji:"\u{1FAA6}",val:"turquesa"}]},
   {num:6,type:"Acertijo del Lugar",title:"Nuestro lugar secreto",mode:"logic",riddleKey:"c6_riddle",placeholderKey:"c6_placeholder",answer:"cardenalito",errorKey:"c6_error",whereKey:"c6_where",subKey:"c6_sub",subAnswerKey:"c6_subA",subRevealKey:"c6_subR"},
   {num:7,type:"Acertijo del Viaje",title:"El vehiculo de los recuerdos",mode:"logic",riddleKey:"c7_riddle",placeholderKey:"c7_placeholder",answer:"carro",errorKey:"c7_error",whereKey:"c7_where",subKey:"c7_sub",subAnswerKey:"c7_subA",subRevealKey:"c7_subR"},
   {num:8,type:"Imagen Mental",title:"Las 4 palabras",mode:"logic",riddleKey:"c8_riddle",placeholderKey:"c8_placeholder",answer:"mequierocasarcontigo",errorKey:"c8_error",whereKey:"c8_where",subKey:"c8_sub",subAnswerKey:"c8_subA",subRevealKey:"c8_subR"},
@@ -473,8 +473,8 @@ function buildCipher(c) {
   html += '<div class="cipher-block">';
   html += '<span class="cipher-label">// mensaje cifrado</span>';
   html += '<div class="cipher-code">'+c.cipherDisplay+'</div>';
-  html += '<span class="cipher-toggle" id="ctog-'+c.num+'" onclick="toggleTable('+c.num+')">Ver tabla A=1 B=2...</span>';
-  html += '<div class="cipher-table-wrap" id="ctab-'+c.num+'">';
+  html += '';
+  html += '<div class="cipher-table-wrap" id="ctab-'+c.num+'" style="display:none;">';
   html += '<table class="cipher-table"><tr><td>A=1</td><td>B=2</td><td>C=3</td><td>D=4</td><td>E=5</td><td>F=6</td></tr>';
   html += '<tr><td>G=7</td><td>H=8</td><td>I=9</td><td>J=10</td><td>K=11</td><td>L=12</td></tr>';
   html += '<tr><td>M=13</td><td>N=14</td><td>O=15</td><td>P=16</td><td>Q=17</td><td>R=18</td></tr>';
